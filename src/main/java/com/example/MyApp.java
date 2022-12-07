@@ -9,12 +9,14 @@ public class MyApp {
 
         MessageService messageService = applicationContext.getBean("messageService", MessageService.class);
 
-        MessageService secondMessageService = applicationContext.getBean("messageService", MessageService.class);
+        MessageService secondMessageService = applicationContext.getBean("messageService1", MessageService.class);
 
         System.out.println("First messageService : " + messageService.hashCode());
         System.out.println("Second messageService : " + secondMessageService.hashCode());
 
+
         System.out.println(messageService.getMessage());
+        System.out.println(secondMessageService.getMessage());
 
         applicationContext.close();
     }
