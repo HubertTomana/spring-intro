@@ -11,6 +11,9 @@ public class MyApp {
 
         MessageService secondMessageService = applicationContext.getBean("messageService", MessageService.class);
 
+        System.out.println("First messageService : " + messageService.hashCode());
+        System.out.println("Second messageService : " + secondMessageService.hashCode());
+
         System.out.println(messageService.getMessage());
 
         applicationContext.close();
